@@ -1,0 +1,281 @@
+:root {
+    --color-background: #E4EAFF;  
+    --color-game-info: #4e88fe;
+    --color-chat-header: #4e88fe;
+    --color-chat-panel: #ffffff;
+    --color-quest-panel-blue: #4e88fe;
+    --color-quest-panel-red: #FE5151;
+    --color-quest-panel-green: #19A867;
+    --color-chat-bubble1: #dde6fd;
+    --color-chat-bubble2: #4e88fe;
+    --color-chat-bubble3: #e43a1c;
+    --color-choice: #dde6fd;
+    --color-font-white: #f4f4f4;
+    --color-font-smokewhite: #d4d4d4;
+    --color-font-black: #3a4b6c;
+    --color-red: #FE5151;
+    --color-green: #4DE74D;
+
+    --font-size2: 2.8vw;
+    --font-size3: 3vw;
+    --font-size4: 3.2vw;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, Verdana, sans-serif;
+}
+
+html {
+    -webkit-user-select: none;  /* Safari */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* IE10+ */
+    user-select: none;          /* Standar */
+    overscroll-behavior-y: none;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    /* overflow: scroll; */
+    background-color: var(--color-background);
+    color: #000000;
+}
+
+#game-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-top: calc(env(safe-area-inset-top) + 2vw);
+    padding: 2vw 5vw;
+    background-color: var(--color-game-info);
+    color: var(--color-font-white);
+    font-size: var(--font-size4);
+    line-height: 1.2;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#game-info button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vw;
+    aspect-ratio: 1/1;
+    border: none;
+    border-radius: 50%;
+    font-size: var(--font-size2);
+    font-weight: bold;
+    color: var(--color-font-white);
+    background-color: var(--color-red);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+#game-info button.left {
+    margin-left: auto;
+}
+
+#curtain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-background);
+    z-index: 20;
+}
+
+.game-panel {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 4vw;
+}
+
+.game-panel .text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--color-font-black);
+    font-size: var(--font-size3);
+    line-height: 1.2;
+}
+
+.chat-panel {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4vw;
+    border-radius: 3vw;
+    padding-bottom: 2vw;
+    background-color: var(--color-chat-panel);
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.chat-panel .header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2vw;
+    border-radius: 3vw 3vw 0 0;
+    padding: 1.5vw 2vw;
+    column-gap: 3vw;
+    background-color: var(--color-chat-header);
+    font-size: var(--font-size3);
+    font-weight: bold;
+    color: var(--color-font-white);
+}
+
+.chat-panel .header img {
+    width: 7vw;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--color-chat-header);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-panel .text {
+    width: fit-content;
+    max-width: 85%;
+    margin: 2vw 3vw;
+    margin-top: 0;
+    padding: 2vw 3vw;
+    border-radius: 3vw;
+    border-bottom-left-radius: 0;
+    background-color: var(--color-chat-bubble1);
+    text-align: left;
+    line-height: 1.2;
+    font-size: var(--font-size2);
+    color: var(--color-font-black);
+}
+
+.chat-panel .text.me {
+    align-self: flex-end;
+    text-align: right;
+    border-radius: 3vw;
+    border-bottom-right-radius: 0;
+    background-color: var(--color-chat-bubble2);
+    color: var(--color-font-white);
+}
+
+.chat-panel .text.choice {
+    align-self: flex-end;
+    text-align: right;
+    border-radius: 3vw;
+    border-bottom-right-radius: 0;
+    background-color: var(--color-chat-bubble3);
+}
+
+.quest-panel {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 3vw;
+    width: 100%;
+    padding: 5vw 5vw;
+    margin-top: 6vw;
+    margin-bottom: 20vw;
+    border-radius: 3vw;
+    background-color: var(--color-quest-panel-blue);
+    box-shadow: 0 0px 10px rgba(255, 255, 255, 0.8);
+}
+
+.quest-panel.red {
+    background-color: var(--color-quest-panel-red);
+}
+
+.quest-panel.green {
+    background-color: var(--color-quest-panel-green);
+}
+
+.quest-panel .question {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 3vw;
+    width: 100%;
+}
+
+.quest-panel .question .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: var(--font-size3);
+    color: var(--color-font-white);
+}
+
+.quest-panel .question label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    border: 1px solid var(--color-font-white);
+    border-radius: 2vw;
+    padding: 2vw 3vw;
+    font-size: var(--font-size3);
+    text-align: center;
+    color: var(--color-font-white);
+}
+
+.quest-panel .question input {
+    display: none;
+}
+
+.quest-panel .question input:checked + label{
+    background-color: var(--color-choice);
+    border-color: var(--color-choice);
+    color: var(--color-font-black);
+}
+
+.quest-panel .explanation {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+}
+
+.quest-panel .explanation .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: var(--font-size3);
+    color: var(--color-font-white);
+}
+
+.quest-panel .explanation .btnOk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vw;
+    border: 1px solid var(--color-choice);
+    border-radius: 2vw;
+    padding: 2vw 3vw;
+    font-size: var(--font-size2);
+    background-color: var(--color-choice);
+    border-color: var(--color-choice);
+    color: var(--color-font-black);
+    font-weight: bold;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}

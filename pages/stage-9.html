@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Defender</title>
+
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/defender-v2.css">
+</head>
+<body>
+
+    <div id="curtain"></div>
+    <div id="game-info"></div>
+    <div class="game-panel">
+        <div class="text" id="intro"></div>
+        <div class="chat-panel" id="chatPanel"></div>
+        <div class="quest-panel" id="questPanel"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="../js/defender-v3.js"></script>
+
+    <script>
+        const game = new Defender({
+            gameInfo: "Stage 9 - Trusted Contact Impersonation Scam",
+            home: "../index.html",
+            next: "stage-10.html",
+
+            intro: `Anda menerima pesan dari teman dekat Anda melalui aplikasi chat. Gaya bahasanya terlihat normal, 
+            tetapi ia tiba-tiba meminta bantuan yang cukup mendesak. Anda merasa situasinya agak aneh, tetapi 
+            karena ini teman dekat, Anda ragu untuk menolaknya.`,
+
+            picture: "../images/working.png",
+            id: "Stefi",
+            chat: [
+                `x: Hei, lagi sibuk ngga?`,
+                `y: Ngga sih. Kenapa?`,
+                `x: Aku lagi sedikit panik nih 😓`,
+                `x: Tiba-tiba nomorku error terus aku ngga bisa login ke akun penting.`,
+                `y: Maksudnya gimana? Akun apa?`,
+                `x: Akun chat ini juga hampir ngga bisa dipake.`,
+                `x: Ini aku chat pake laptop sekarang, jadi agak terbatas.`,
+                `x: Kamu bisa bantu bantuin ngga?`,
+                `y: Bantu apa?`,
+                `x: Aku butuh kode verifikasi yang bakal masuk ke nomormu.`,
+                `y: Kenapa kok ke nomorku?`,
+                `x: Aku tadi pake nomormu untuk recovery, soalnya nomorku kan lagi error.`,
+                `x: Ini sementara aja kok.`,
+                `x: Nanti kamu kirim aja kode 6 digitnya ke aku ya.`,
+                `y: Ini aman ngga?`,
+                `x: Aman lah, ini cuma buat verifikasi saja.`,
+                `x: Kalau ngga sekarang, akunku bisa kekunci selamanya nih 😓`,
+                `x: Beneran nih butuh bantuan cepet.`,
+                `x: Tolongin ya, cuma sekali ini aja.`,
+            ],
+
+            quest: [
+                [
+                    `Apa tindakan paling tepat dalam situasi ini?`,
+                    [
+                        `Tidak membagikan kode apa pun dan mencoba menghubungi teman tersebut melalui jalur lain 
+                        untuk memastikan identitasnya.`,
+                        `Membagikan kode karena permintaan datang dari teman dekat yang dikenal.`,
+                        `Membagikan kode sekali saja karena dianggap tidak berisiko besar.`,
+                        `Menanyakan detail tambahan lalu tetap bersiap untuk mengirim kode jika diperlukan.`,
+                    ],
+                    [
+                        `Verifikasi identitas melalui kanal lain adalah langkah paling aman jika ada hal 
+                        mencurigakan.`,
+                        `Akun teman bisa saja sudah diambil alih, sehingga kepercayaan tidak cukup untuk 
+                        menjamin keamanan.`,
+                        `Kode verifikasi tetap sensitif meskipun hanya dibagikan sekali.`,
+                        `Menanyakan detail tidak cukup jika Anda tetap berencana membagikan kode.`,
+                    ],
+                ],
+
+                [
+                    `Mengapa situasi ini patut dicurigai meskipun berasal dari teman Anda?`,
+                    [
+                        `Karena permintaan kode verifikasi adalah permintaan sensitif yang tidak biasa dilakukan 
+                        melalui chat biasa.`,
+                        `Karena teman Anda menggunakan banyak emoji dalam pesan.`,
+                        `Karena gaya bahasa teman Anda sedikit berbeda dari biasanya.`,
+                        `Karena teman Anda meminta bantuan secara mendesak.`,
+                    ],
+                    [
+                        `Permintaan kode verifikasi adalah indikator kuat aktivitas yang berpotensi berbahaya.`,
+                        `Penggunaan emoji tidak berkaitan langsung dengan keamanan.`,
+                        `Perbedaan gaya bahasa bisa terjadi, tetapi bukan indikator utama.`,
+                        `Urgensi sering digunakan untuk menekan keputusan, tetapi bukan satu-satunya faktor 
+                        penentu.`,
+                    ],
+                ],
+
+                [
+                    `Jika Anda ingin tetap membantu tanpa mengambil risiko, langkah paling bijak adalah?`,
+                    [
+                        `Menyarankan teman untuk menghubungi layanan resmi atau melakukan pemulihan akun melalui 
+                        sistem yang tersedia.`,
+                        `Meminta teman menjelaskan lebih detail sambil tetap membuka kemungkinan untuk mengirim 
+                        kode.`,
+                        `Membantu dengan mengirim kode tetapi segera mengganti pengaturan akun Anda.`,
+                        `Menunggu sampai situasi lebih jelas tanpa melakukan apa pun.`,
+                    ],
+                    [
+                        `Membantu lewat jalur resmi menjaga keamanan sekaligus tetap memberikan solusi.`,
+                        `Menunda sambil mempertimbangkan tetap berisiko jika keputusan akhirnya tetap membagikan 
+                        kode.`,
+                        `Mengubah pengaturan setelahnya tidak menghilangkan risiko jika kode sudah digunakan.`,
+                        `Menunggu tidak menyelesaikan situasi dan tidak membantu secara aktif.`,
+                    ],
+                ],
+
+                [
+                    `Apa risiko paling serius jika Anda membagikan kode verifikasi tersebut?`,
+                    [
+                        `Akun Anda dapat diambil alih karena kode tersebut digunakan untuk proses login atau 
+                        reset akses.`,
+                        `Teman Anda akan terlalu sering meminta bantuan di masa depan.`,
+                        `Percakapan Anda menjadi tidak nyaman setelah kejadian ini.`,
+                        `Anda akan menerima lebih banyak pesan dari nomor tidak dikenal.`,
+                    ],
+                    [
+                        `Kode verifikasi dapat digunakan langsung untuk mengakses atau mengambil alih akun Anda.`,
+                        `Perilaku teman bukan risiko utama dalam konteks keamanan.`,
+                        `Ketidaknyamanan sosial bukan dampak utama dibanding kehilangan akses akun.`,
+                        `Pesan tambahan bukan risiko utama dibanding penyalahgunaan akun.`,
+                    ],
+                ],
+            ],
+        });
+    </script>
+</body>
+</html>

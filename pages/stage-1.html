@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Defender</title>
+
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/defender-v2.css">
+</head>
+<body>
+
+    <div id="curtain"></div>
+    <div id="game-info"></div>
+    <div class="game-panel">
+        <div class="text" id="intro"></div>
+        <div class="chat-panel" id="chatPanel"></div>
+        <div class="quest-panel" id="questPanel"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="../js/defender-v3.js"></script>
+
+    <script>
+        const game = new Defender({
+            gameInfo: "Stage 1 - Document Verification",
+            home: "../index.html",
+            next: "stage-2.html",
+
+            intro: `Anda membaca informasi tentang komunitas traveling bernama "Jalan Terus" di sebuah postingan 
+            media sosial. Berdasarkan komentar-komentar pada postingan tersebut, komunitas ini sering memberikan 
+            informasi tiket murah untuk liburan ke luar negeri. Karena Anda tertarik, akhirnya Anda memutuskan 
+            untuk bergabung di group chat komunitas tersebut. Tidak lama berselang, seseorang menghubungi Anda.`,
+
+            picture: "../images/working.png",
+            id: "+62 112-3345-6789",
+            chat: [
+                `x: Halo Kak,`,
+                `x: Selamat datang di komunitas traveling "Jalan Terus". Perkenalkan, nama saya Mimi selaku admin 
+                di komunitas ini.`,
+                `y: Halo Kak, salam kenal. Terima kasih informasinya.`,
+                `x: Untuk memastikan data Kakak valid, kami perlu melakukan verifikasi. Caranya gampang kak, Kakak 
+                cukup menuliskan nama lengkap, tanggal lahir, kota domisili, foto KTP, foto passport, dan kontak 
+                keluarga.`,
+                `x: KTP dan passport digunakan untuk melakukan booking tiket kalau nanti Kakak ingin membeli tiket 
+                yang kami tawarkan. Lalu untuk kontak keluarga bisa diisi kontak pasangan (suami/istri) atau 
+                orang tua (ayah/ibu) jika Kakak belum menikah.`,
+                `x: Formatnya kurang lebih seperti ini ya kak:`,
+                `x: Nama: [nama lengkap]<br>
+                Tanggal lahir: [dd/mm/yyyy]<br>
+                Domisili: [nama kota, provinsi]<br>
+                Kontak keluarga: [nama (suami/istri/ayah/ibu)]<br>
+                Nomor keluarga: [nomor telepon kontak keluarga]<br>`,
+                `x: Untuk foto KTP dan passport dipastikan dapat terbaca dan dikirim dalam format HD ya kak.`,
+                `x: Kalau bingung langsung ditanyakan saja ya kak.`,
+            ],
+
+            quest: [
+                [
+                    `Apa tindakan paling tepat yang seharusnya dilakukan dalam situasi ini?`,
+                    [
+                        `Menolak mengirim dokumen identitas dan meminta verifikasi komunitas melalui kanal resmi 
+                        terlebih dahulu.`,
+                        `Mengirim data diri (nama, domisili) terlebih dahulu dan menunda pengiriman KTP dan passport.`,
+                        `Mengirim foto KTP dan passport dengan kualitas rendah agar tidak terlalu berisiko.`,
+                        `Mengirim semua data karena penjelasan admin terlihat masuk akal.`,
+                    ],
+                    [
+                        `Jangan pernah membagikan dokumen identitas sebelum yakin pihak tersebut benar dan memiliki 
+                        sistem resmi.`,
+                        `Meskipun tidak mengirim dokumen, data pribadi lain tetap bisa disalahgunakan jika sumbernya 
+                        belum jelas.`,
+                        `Menurunkan kualitas gambar tidak menghilangkan risiko. Data identitas tetap bisa dimanfaatkan.`,
+                        `Penjelasan yang masuk akal tidak selalu berarti aman. Risiko tetap ada jika tidak ada verifikasi.`,
+                    ],
+                ],
+
+                [
+                    `Apa faktor terpenting yang membuat permintaan admin ini berisiko?`,
+                    [
+                        `Permintaan dokumen identitas dilakukan melalui chat tanpa sistem atau prosedur resmi.`,
+                        `Komunitas menawarkan tiket murah.`,
+                        `Admin memberikan contoh format data.`,
+                        `Admin menjelaskan penggunaan data untuk booking.`,
+                    ],
+                    [
+                        `Dokumen identitas tidak seharusnya dikirim melalui chat tanpa sistem resmi yang jelas.`,
+                        `Harga murah bisa menarik, tetapi bukan faktor utama yang menentukan keamanan.`,
+                        `Format data bukan masalah utama. Yang penting adalah jenis data dan cara pengumpulannya.`,
+                        `Alasan penggunaan data bisa terdengar logis, tetapi tetap harus diverifikasi.`,
+                    ],
+                ],
+
+                [
+                    `Jika Anda tidak ingin langsung keluar dari grup, apa langkah paling bijak?`,
+                    [
+                        `Tetap di grup, tidak mengirim dokumen, dan mencoba mencari informasi tambahan tentang 
+                        komunitas tersebut.`,
+                        `Mengirim sebagian data agar tetap bisa mengikuti komunitas.`,
+                        `Mengirim dokumen tetapi meminta admin menghapus setelah digunakan.`,
+                        `Mengirim paspor saja karena dianggap lebih relevan untuk perjalanan.`,
+                    ],
+                    [
+                        `Menahan data sambil melakukan verifikasi adalah cara paling aman dalam situasi yang 
+                        belum jelas.`,
+                        `Mengirim sebagian data tetap membuka peluang penyalahgunaan.`,
+                        `Permintaan penghapusan tidak menjamin data benar-benar dihapus atau tidak disalin.`,
+                        `Paspor justru termasuk dokumen identitas yang sangat sensitif.`,
+                    ],
+                ],
+
+                [
+                    `Apa risiko paling serius jika Anda mengirimkan KTP dan passport dalam situasi ini?`,
+                    [
+                        `Identitas Anda dapat digunakan untuk aktivitas ilegal tanpa sepengetahuan Anda.`,
+                        `Anda akan menerima banyak pesan promosi.`,
+                        `Anda kehilangan kesempatan mendapatkan tiket murah.`,
+                        `Anda akan dikeluarkan dari komunitas.`,
+                    ],
+                    [
+                        `Dokumen identitas bisa digunakan oleh orang lain untuk berbagai tindakan tanpa 
+                        persetujuan Anda.`,
+                        `Spam hanyalah dampak ringan dibanding penyalahgunaan identitas.`,
+                        `Kehilangan kesempatan bukan risiko utama dalam situasi ini.`,
+                        `Dampak sosial seperti keluar dari grup jauh lebih kecil dibanding risiko keamanan data.`,
+                    ],
+                ],
+            ],
+        });
+    </script>
+</body>
+</html>

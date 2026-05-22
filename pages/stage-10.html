@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Defender</title>
+
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/defender-v2.css">
+</head>
+<body>
+
+    <div id="curtain"></div>
+    <div id="game-info"></div>
+    <div class="game-panel">
+        <div class="text" id="intro"></div>
+        <div class="chat-panel" id="chatPanel"></div>
+        <div class="quest-panel" id="questPanel"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="../js/defender-v3.js"></script>
+
+    <script>
+        const game = new Defender({
+            gameInfo: "Stage 10 - Conversational Phishing & Adaptive Scam",
+            home: "../index.html",
+            next: "../index.html",
+
+            intro: `Anda sedang sibuk mengerjakan pekerjaan ketika menerima pesan dari seseorang yang mengaku 
+            sebagai tim support dari layanan cloud yang sering Anda gunakan. Berbeda dengan pesan sebelumnya, 
+            percakapan ini terasa lebih santai dan tidak langsung meminta sesuatu yang mencurigakan.`,
+
+            picture: "../images/working.png",
+            id: "Cloud Support",
+            chat: [
+                `x: Halo, apakah ini pemilik akun atas nama Anda?`,
+                `y: Iya, ada yang bisa dibantu?`,
+                `x: Terima kasih. Kami dari tim support.`,
+                `x: Kami sedang melakukan pengecekan rutin terkait aktivitas login.`,
+                `x: Kami melihat ada login dari perangkat baru kemarin malam.`,
+                `x: Apakah itu Anda?`,
+                `y: Sepertinya iya, saya sempat login dari perangkat lain.`,
+                `x: Baik, berarti tidak ada masalah ya.`,
+                `x: Kami hanya ingin memastikan akun Anda aman.`,
+                `x: Belakangan ini ada beberapa kasus akses tidak sah.`,
+                `y: Oh begitu.`,
+                `x: Tidak perlu khawatir, ini hanya pengecekan rutin.`,
+                `x: Sebagai tambahan, kami sedang mengaktifkan fitur keamanan baru untuk pengguna tertentu.`,
+                `x: Termasuk akun Anda.`,
+                `y: Fitur apa itu?`,
+                `x: Verifikasi tambahan saat login.`,
+                `x: Kami bisa bantu aktivasi sekarang supaya Anda tidak perlu mengatur sendiri.`,
+                `x: Prosesnya cepat, sekitar 1-2 menit.`,
+                `y: Bagaimana caranya?`,
+                `x: Nanti kami kirimkan link setup.`,
+                `x: Setelah itu Anda login seperti biasa, lalu masukkan kode verifikasi yang dikirim sistem.`,
+                `x: Kami hanya memastikan prosesnya berjalan.`,
+                `y: Ini wajib ya?`,
+                `x: Tidak wajib, tetapi sangat disarankan.`,
+                `x: Beberapa pengguna yang tidak mengaktifkan fitur ini mengalami pembatasan sementara.`,
+                `x: Jadi lebih baik disiapkan dari sekarang.`,
+                `x: Kalau Anda siap, saya kirimkan linknya ya.`,
+            ],
+
+            quest: [
+                [
+                    `Apa tindakan paling tepat dalam situasi ini?`,
+                    [
+                        `Menolak mengikuti link yang diberikan dan memilih mengaktifkan fitur keamanan langsung 
+                        dari aplikasi resmi secara mandiri.`,
+                        `Mengikuti proses karena tidak ada permintaan data yang mencurigakan sejauh ini.`,
+                        `Mengikuti proses sampai tahap awal untuk melihat apakah benar fitur tersebut ada.`,
+                        `Meminta link dikirim ulang lalu memeriksa sebelum mengkliknya.`,
+                    ],
+                    [
+                        `Mengaktifkan fitur melalui aplikasi resmi memastikan Anda tidak terjebak dalam proses 
+                        palsu.`,
+                        `Pendekatan santai justru digunakan untuk menurunkan kewaspadaan.`,
+                        `Tahap awal tetap berisiko karena bisa menjadi bagian dari alur penipuan.`,
+                        `Memeriksa link saja tidak cukup karena tampilan bisa dibuat sangat meyakinkan.`,
+                    ],
+                ],
+
+                [
+                    `Mengapa percakapan ini lebih berbahaya dibandingkan phishing biasa?`,
+                    [
+                        `Karena dibangun secara bertahap sehingga terlihat normal dan tidak langsung memicu 
+                        kecurigaan.`,
+                        `Karena tidak menggunakan bahasa yang mengancam.`,
+                        `Karena tidak langsung meminta password kepada pengguna.`,
+                        `Karena terlihat seperti percakapan biasa yang ramah.`,
+                    ],
+                    [
+                        `Pendekatan bertahap membuat korban merasa aman sebelum permintaan sensitif muncul.`,
+                        `Tidak adanya ancaman justru membuat pengguna lebih mudah percaya.`,
+                        `Permintaan sensitif sering muncul di tahap berikutnya setelah kepercayaan terbentuk.`,
+                        `Gaya percakapan yang natural adalah strategi untuk mengurangi kecurigaan.`,
+                    ],
+                ],
+
+                [
+                    `Jika Anda ingin memastikan keamanan tanpa mengganggu percakapan, langkah paling bijak adalah?`,
+                    [
+                        `Menghentikan percakapan dan memverifikasi informasi melalui kanal resmi seperti 
+                        aplikasi atau website utama.`,
+                        `Melanjutkan percakapan sambil tetap berhati-hati.`,
+                        `Meminta pihak tersebut menjelaskan lebih detail prosesnya.`,
+                        `Menyetujui proses selama belum diminta data sensitif.`,
+                    ],
+                    [
+                        `Verifikasi melalui kanal resmi adalah satu-satunya cara memastikan keaslian tanpa risiko.`,
+                        `Berhati-hati tidak cukup jika tetap mengikuti alur yang dikontrol pihak lain.`,
+                        `Penjelasan tambahan bisa saja tetap bagian dari manipulasi.`,
+                        `Menunggu sampai diminta data sering kali sudah terlambat dalam skenario phishing bertahap.`,
+                    ],
+                ],
+
+                [
+                    `Apa risiko paling serius jika Anda mengikuti seluruh proses hingga selesai?`,
+                    [
+                        `Akun Anda dapat diambil alih sepenuhnya karena seluruh proses login dan verifikasi 
+                        dikendalikan oleh pihak lain.`,
+                        `Akun Anda akan digunakan untuk aktivitas tertentu tanpa sepengetahuan Anda dalam 
+                        waktu singkat.`,
+                        `Informasi dalam akun Anda dapat diakses oleh pihak lain.`,
+                        `Akun Anda akan menunjukkan aktivitas login dari perangkat yang tidak dikenal.`,
+                    ],
+                    [
+                        `Phishing bertahap biasanya bertujuan mendapatkan kontrol penuh melalui kombinasi 
+                        kredensial dan verifikasi.`,
+                        `Akses sementara tetap berisiko, tetapi bukan dampak paling besar.`,
+                        `Akses data adalah risiko, tetapi kehilangan kontrol akun lebih serius.`,
+                        `Login asing adalah indikator awal, bukan dampak paling parah.`,
+                    ],
+                ],
+            ],
+        });
+    </script>
+</body>
+</html>

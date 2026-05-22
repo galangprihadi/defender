@@ -1,0 +1,123 @@
+:root {
+    --color-background: #E4EAFF;
+    --color-header: #4e88fe;
+    --color-btnBlue: #4e88fe;
+
+    --color-font-white: #f4f4f4;
+    --color-font-black: #3a4b6c;
+
+    --font-size2: 2.4vw;
+    --font-size3: 3vw;
+    --font-size4: 3.2vw;
+    --font-size5: 4vw;
+
+    --color-blue: #4e88fe;
+
+    --color-chat-header: #4e88fe;
+    --color-chat-panel: #ffffff;
+    --color-quest-panel-blue: #4e88fe;
+    --color-quest-panel-red: #FE5151;
+    --color-quest-panel-green: #19A867;
+    --color-chat-bubble1: #dde6fd;
+    --color-chat-bubble2: #4e88fe;
+    --color-chat-bubble3: #e43a1c;
+    --color-choice: #dde6fd;
+    --color-font-smokewhite: #d4d4d4;
+    --color-red: #FE5151;
+    --color-green: #4DE74D;
+
+    
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, Verdana, sans-serif;
+}
+
+html {
+    -webkit-user-select: none;  /* Safari */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* IE10+ */
+    user-select: none;          /* Standar */
+    overscroll-behavior-y: none;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100dvh;
+    margin: auto;
+    /* overflow: scroll; */
+    background-color: var(--color-background);
+    color: #000000;
+}
+
+#curtain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-background);
+    z-index: 20;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: calc(env(safe-area-inset-top) + 2vw);
+    padding: 2vw 5vw;
+    background-color: var(--color-header);
+    color: var(--color-font-white);
+    font-size: var(--font-size5);
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    padding: 2vw 5vw;
+    padding-bottom: 30vw;
+    color: var(--color-font-black);
+    font-size: var(--font-size4);
+}
+
+#menu button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-btnBlue);
+    border: none;
+    border-radius: 2vw;
+    padding: 2vw 5vw;
+    font-size: var(--font-size3);
+    text-align: center;
+    color: var(--color-font-white);
+    font-weight: 500;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 3vw 5vw;
+    background-color: var(--color-header);
+    color: var(--color-font-white);
+    font-size: var(--font-size2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}

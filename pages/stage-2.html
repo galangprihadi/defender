@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Defender</title>
+
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/defender-v2.css">
+</head>
+<body>
+
+    <div id="curtain"></div>
+    <div id="game-info"></div>
+    <div class="game-panel">
+        <div class="text" id="intro"></div>
+        <div class="chat-panel" id="chatPanel"></div>
+        <div class="quest-panel" id="questPanel"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="../js/defender-v3.js"></script>
+
+    <script>
+        const game = new Defender({
+            gameInfo: "Stage 2 - Data Sharing",
+            home: "../index.html",
+            next: "stage-3.html",
+
+            intro: `Anda sedang mencari pekerjaan freelance secara online. Setelah melamar di salah satu postingan,
+            Anda dihubungi oleh seseorang yang mengaku sebagai HR dari perusahaan digital marketing. Tawaran
+            pekerjaan terlihat menarik dan prosesnya tampak cepat.`,
+
+            picture: "../images/working.png",
+            id: "+62 889-2233-7755",
+            chat: [
+                `x: Halo Kak, saya dari HR perusahaan digital marketing.`,
+                `x: Kami tertarik dengan profil Kakak untuk posisi freelance admin.`,
+                `y: Wah menarik. Boleh dijelaskan pekerjaannya?`,
+                `x: Tugasnya cukup sederhana, hanya input data dan laporan harian.`,
+                `x: Fee sekitar 300 ribu per hari ya Kak.`,
+                `y: Wah cukup menarik. Apa langkah selanjutnya?`,
+                `x: Sebelum lanjut, kami perlu verifikasi data dulu ya.`,
+                `x: Mohon kirimkan CV, foto diri, dan KTP untuk keperluan administrasi.`,
+                `x: Kalau bisa sekarang ya Kak, karena kandidatnya cukup banyak.`,
+            ],
+
+            quest: [
+                [
+                    `Apa tindakan paling tepat dalam situasi ini?`,
+                    [
+                        `Memverifikasi perusahaan melalui sumber resmi terlebih dahulu sebelum mengirim data apa pun.`,
+                        `Mengirim CV terlebih dahulu dan menunda pengiriman KTP sampai proses lebih lanjut.`,
+                        `Mengirim semua data karena terlihat seperti proses rekrutmen biasa.`,
+                        `Mengirim data karena takut kehilangan kesempatan.`,
+                    ],
+                    [
+                        `Langkah paling aman adalah memastikan terlebih dahulu bahwa perusahaan tersebut 
+                        benar-benar ada dan valid sebelum membagikan informasi pribadi apa pun.`,
+                        `Pendekatan ini lebih hati-hati, tetapi tetap berisiko karena Anda mulai membangun 
+                        interaksi dengan pihak yang belum terverifikasi.`,
+                        `Meskipun terlihat wajar, permintaan KTP di tahap awal merupakan red flag dalam 
+                        proses rekrutmen.`,
+                        `Keputusan yang dipengaruhi rasa takut kehilangan peluang sering kali mengabaikan 
+                        aspek keamanan.`,
+                    ],
+                ],
+
+                [
+                    `Manakah alasan terkuat yang membuat situasi ini perlu diwaspadai?`,
+                    [
+                        `Karena data identitas seperti KTP diminta sebelum ada proses resmi seperti wawancara.`,
+                        `Karena gaji yang ditawarkan cukup tinggi.`,
+                        `Karena komunikasi dilakukan melalui chat.`,
+                        `Karena pekerjaan yang ditawarkan terlihat sederhana.`,
+                    ],
+                    [
+                        `Permintaan data identitas di tahap awal tanpa proses seleksi resmi adalah tanda risiko tinggi.`,
+                        `Gaji tinggi bisa menarik perhatian, tetapi bukan indikator utama penipuan.`,
+                        `Chat bisa menjadi media komunikasi normal, sehingga bukan indikator utama risiko.`,
+                        `Pekerjaan sederhana bukan masalah, yang penting adalah proses dan validitas pihak 
+                        yang meminta data.`,
+                    ],
+                ],
+
+                [
+                    `Jika Anda tetap tertarik melamar, tindakan mana yang paling bijak?`,
+                    [
+                        `Mencari keberadaan perusahaan melalui website resmi atau platform profesional 
+                        sebelum melanjutkan.`,
+                        `Melanjutkan komunikasi sambil mengumpulkan lebih banyak informasi dari HR tersebut.`,
+                        `Mengirim sebagian data untuk menguji apakah proses ini benar atau tidak.`,
+                        `Menunggu HR mengirim detail kontrak sebelum mengambil keputusan.`,
+                    ],
+                    [
+                        `Verifikasi independen melalui sumber resmi adalah langkah paling penting sebelum 
+                        melanjutkan proses.`,
+                        `Mengumpulkan informasi memang baik, tetapi tetap berisiko jika dilakukan langsung 
+                        melalui sumber yang belum jelas.`,
+                        `Memberikan data, bahkan sebagian, tetap membuka risiko penyalahgunaan.`,
+                        `Menunggu kontrak tidak menjamin keamanan jika sumbernya sendiri belum valid.`,
+                    ],
+                ],
+
+                [
+                    `Apa risiko paling signifikan jika Anda mengirimkan data KTP pada tahap ini?`,
+                    [
+                        `Data dapat digunakan untuk aktivitas ilegal seperti pembuatan akun atau penipuan 
+                        atas nama Anda.`,
+                        `Anda akan menerima banyak pesan promosi.`,
+                        `Anda akan lebih sering dihubungi oleh recruiter lain.`,
+                        `Data hanya digunakan untuk keperluan internal perusahaan.`,
+                    ],
+                    [
+                        `Data identitas seperti KTP dapat disalahgunakan untuk berbagai tindakan ilegal tanpa 
+                        sepengetahuan Anda.`,
+                        `Spam hanyalah dampak ringan dibanding potensi penyalahgunaan identitas.`,
+                        `Dihubungi recruiter lain bukan risiko utama dalam konteks ini.`,
+                        `Tidak ada jaminan data hanya digunakan secara internal jika pihak tersebut tidak 
+                        terverifikasi.`,
+                    ],
+                ],
+            ],
+        });
+
+    </script>
+</body>
+</html>

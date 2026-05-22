@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Defender</title>
+
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/defender-v2.css">
+</head>
+<body>
+
+    <div id="curtain"></div>
+    <div id="game-info"></div>
+    <div class="game-panel">
+        <div class="text" id="intro"></div>
+        <div class="chat-panel" id="chatPanel"></div>
+        <div class="quest-panel" id="questPanel"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="../js/defender-v3.js"></script>
+
+    <script>
+        const game = new Defender({
+            gameInfo: "Stage 6 - Verification Code Scam (Phishing)",
+            home: "../index.html",
+            next: "stage-7.html",
+
+            intro: `Anda sedang mencoba menjual barang bekas di sebuah marketplace. Tidak lama setelah Anda memasang
+            iklan, ada calon pembeli yang terlihat serius dan ingin transaksi cepat. Ia mengatakan bahwa marketplace
+            sedang menerapkan verifikasi tambahan untuk mencegah penipuan, lalu meminta Anda membantu proses verifikasi.`,
+
+            picture: "../images/working.png",
+            id: "+62 1122 3344 5566",
+            chat: [
+                `x: Halo kak, barangnya masih ada? Aku mau ambil hari ini.`,
+                `y: Halo, masih ada. Mau lewat kurir atau ketemu?`,
+                `x: Kurir saja ya kak. Aku butuh cepat soalnya buat hadiah.`,
+                `x: Tapi sebelum itu, marketplace minta verifikasi akun penjual dulu.`,
+                `y: Verifikasi apa ya? Aku belum pernah dengar.`,
+                `x: Iya kak, sekarang banyak penipuan. Jadi ada verifikasi biar transaksi aman.`,
+                `x: Nanti kakak bakal dapat kode verifikasi lewat sms.`,
+                `x: Kakak kirim kodenya ke aku ya, biar sistem bisa buka fitur pembayaran aman.`,
+                `y: Kode verifikasi itu bukannya rahasia?`,
+                `x: Tenang kak, ini bukan password. Ini cuma buat konfirmasi kalau iklan ini bener milik kakak.`,
+                `x: Kalau kakak tidak mau, aku juga paham, tapi aku tidak bisa lanjut bayar lewat sistem.`,
+                `x: Aku bisa bayar cepat kalau verifikasi beres.`,
+                `y: Kok harus lewat kamu?`,
+                `y: Tidak bisa lewat aplikasi marketplace saja?`,
+                `x: Katanya harus dibantu pembeli. Ini prosedur baru kak, emang agak bingungin.`,
+                `x: Tapi aku sudah beberapa kali kayak gini sama penjual lain. Aman kok kak.`,
+                `x: Kalau mau, aku bisa kirim bukti chat penjual sebelumnya biar kakak percaya.`,
+                `x: Maaf ya kak kalau ribet. Tapi aku serius mau beli. Tolong dibantu biar cepat.`,
+                `x: Kalau ngga bisa ya gapapa kak. Nanti biar aku cari penjual yang lain aja.`,
+            ],
+
+            quest: [
+                [
+                    `Apa tindakan paling tepat dalam situasi ini?`,
+                    [
+                        `Menolak membagikan kode verifikasi, lalu mengecek notifikasi dan aturan transaksi langsung 
+                        di aplikasi marketplace.`,
+                        `Membagikan kode verifikasi karena pembeli terlihat serius dan ingin transaksi cepat.`,
+                        `Membagikan kode verifikasi setelah pembeli mengirim bukti chat penjual lain sebagai jaminan.`,
+                        `Membagikan kode verifikasi, lalu segera mengganti password marketplace setelah transaksi 
+                        selesai.`,
+                    ],
+                    [
+                        `Kode verifikasi tidak seharusnya dibagikan. Cara aman adalah memeriksa langsung di aplikasi 
+                        dan melanjutkan transaksi hanya lewat fitur resmi.`,
+                        `Keseriusan pembeli tidak menjamin keamanan. Kode verifikasi bisa dipakai untuk tindakan 
+                        yang tidak Anda inginkan.`,
+                        `Bukti chat mudah dibuat atau dipilih-pilih. Verifikasi harus dilakukan melalui kanal resmi, 
+                        bukan melalui orang lain.`,
+                        `Mengganti password setelahnya tidak menyelesaikan risiko jika kode sudah dipakai untuk 
+                        mengambil alih akses atau mengubah pengaturan akun.`,
+                    ],
+                ],
+
+                [
+                    `Mengapa permintaan kode verifikasi ini patut dicurigai?`,
+                    [
+                        `Karena kode verifikasi adalah bentuk otorisasi pemilik akun.`,
+                        `Karena transaksi kurir selalu berbahaya.`,
+                        `Karena pembeli menggunakan bahasa yang terlalu sopan.`,
+                        `Karena pembeli ingin transaksi cepat.`,
+                    ],
+                    [
+                        `Kode verifikasi biasanya dipakai untuk mengonfirmasi tindakan. Jika dibagikan, Anda 
+                        berisiko menyetujui sesuatu tanpa sadar.`,
+                        `Transaksi kurir bisa aman jika lewat sistem resmi. Yang berbahaya adalah permintaan 
+                        kode di luar prosedur aplikasi.`,
+                        `Kesopanan bukan indikator keamanan. Fokus pada permintaan yang berhubungan dengan akses 
+                        atau otorisasi.`,
+                        `Kecepatan bisa normal, tetapi tekanan untuk segera memberi kode adalah tanda bahaya 
+                        ketika Anda belum memverifikasi prosedurnya.`,
+                    ],
+                ],
+
+                [
+                    `Jika Anda tetap ingin melayani pembeli dan tidak ingin kehilangan peluang transaksi, 
+                    langkah paling bijak adalah?`,
+                    [
+                        `Mengarahkan pembeli untuk menggunakan fitur pembayaran dan chat resmi marketplace, lalu 
+                        melaporkan jika pembeli memaksa meminta kode.`,
+                        `Meminta pembeli menunggu sampai Anda sempat mencari informasi dari sumber lain, sambil 
+                        tetap menyiapkan kode jika diperlukan.`,
+                        `Meminta pembeli mengirim identitasnya (foto kartu identitas) agar Anda merasa aman 
+                        membagikan kode.`,
+                        `Membagikan kode sekali saja, dengan asumsi tidak akan terjadi apa-apa karena hanya 
+                        satu kode.`,
+                    ],
+                    [
+                        `Langkah ini menjaga proses tetap di kanal resmi. Jika pembeli menolak, itu sinyal kuat 
+                        untuk berhenti.`,
+                        `Menunda sambil menyiapkan kode membuat Anda tetap berada di jalur berisiko. Yang aman 
+                        adalah tidak pernah berbagi kode.`,
+                        `Meminta identitas orang lain tidak membuat tindakan Anda aman. Anda tetap memberikan 
+                        otorisasi yang seharusnya tidak dibagikan.`,
+                        `Satu kali sudah cukup untuk menyebabkan masalah jika kode itu dipakai untuk mengambil 
+                        alih akses atau mengubah pengaturan.`,
+                    ],
+                ],
+
+                [
+                    `Apa risiko paling serius jika Anda membagikan kode verifikasi kepada orang lain?`,
+                    [
+                        `Akun Anda dapat diambil alih sepenuhnya oleh pihak lain, sehingga mereka bisa mengakses dan mengontrol seluruh aktivitas akun.`,
+                        `Akun Anda dapat digunakan untuk melakukan tindakan tertentu tanpa sepengetahuan Anda dalam waktu singkat.`,
+                        `Informasi dalam akun Anda bisa dilihat oleh pihak lain meskipun tidak diubah.`,
+                        `Akun Anda mungkin menerima aktivitas login dari perangkat lain yang tidak Anda kenali.`,
+                    ],
+                    [
+                        `Kode verifikasi sering digunakan sebagai langkah terakhir untuk otorisasi. Jika dibagikan, orang lain dapat mengambil kendali penuh atas akun Anda.`,
+                        `Meskipun tampak terbatas, akses sementara tetap bisa digunakan untuk aktivitas yang merugikan.`,
+                        `Akses baca terhadap data tetap berisiko, meskipun tidak langsung terlihat dampaknya.`,
+                        `Login dari perangkat lain adalah indikator awal, tetapi bukan dampak paling serius dibanding pengambilalihan akun.`,
+                    ],
+                ],
+            ],
+        });
+    </script>
+</body>
+</html>

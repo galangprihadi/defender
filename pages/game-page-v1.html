@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Defender</title>
+
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/defender.css">
+</head>
+<body>
+
+    <div id="curtain"></div>
+
+    <div id="game-info">
+        Stage 1
+        <button class="left">X</button>
+    </div>
+
+    <div class="game-panel">
+        <div class="text">
+            Anda membaca informasi tentang komunitas traveling bernama "Jalan Terus" di sebuah postingan media 
+            sosial. Berdasarkan komentar-komentar pada postingan tersebut, komunitas ini sering memberikan 
+            informasi tiket murah untuk liburan ke luar negeri. Karena Anda tertarik, akhirnya Anda memutuskan 
+            untuk bergabung di group chat komunitas tersebut. Tidak lama berselang, seseorang menghubungi Anda. 
+        </div>
+
+        <div class="chat-panel">
+            <div class="header">
+                <img src="../images/working.png" alt="pict">+62 112-3345-6789
+            </div>
+            <div class="text">Halo Kak,</div>
+            <div class="text">
+                Selamat datang di komunitas traveling "Jalan Terus". Perkenalkan, nama saya Mimi selaku admin 
+                di komunitas ini.
+            </div>
+            <div class="text">
+                Kami akan selalu memberi informasi harga tiket murah untuk Kakak. Kakak tidak perlu mengeluarkan 
+                biaya apapun untuk menjadi anggota di komunitas ini.
+            </div>
+            <div class="text me">Halo Kak, salam kenal. Terima kasih informasinya.</div>
+            <div class="text">
+                Untuk memastikan data Kakak valid, kami perlu melakukan verifikasi. Caranya gampang kak, Kakak 
+                cukup menuliskan nama lengkap, tanggal lahir, kota domisili, foto KTP, foto passport, dan kontak 
+                keluarga.
+            </div>
+            <div class="text">
+                KTP dan passport digunakan untuk melakukan booking tiket kalau nanti Kakak ingin membeli tiket 
+                yang kami tawarkan. Lalu untuk kontak keluarga bisa diisi kontak pasangan (suami/istri) atau 
+                orang tua (ayah/ibu) jika Kakak belum menikah.
+            </div>
+            <div class="text">Formatnya kurang lebih seperti ini ya kak:</div>
+            <div class="text">
+                Nama: [nama lengkap]<br>
+                Tanggal lahir: [dd/mm/yyyy]<br>
+                Domisili: [nama kota, provinsi]<br>
+                Kontak keluarga: [nama (suami/istri/ayah/ibu)]<br>
+                Nomor keluarga: [nomor telepon kontak keluarga]<br>
+            </div>
+            <div class="text">
+                Untuk foto KTP dan passport dipastikan dapat terbaca dan dikirim dalam format HD ya kak.
+            </div>
+            <div class="text">Kalau bingung langsung ditanyakan saja ya kak.</div>
+            <!-- <div class="text choice">Oke, saya kirim sekarang.</div> -->
+        </div>
+
+        <!-- Question 1 -->
+        <div class="quest-panel" data-answer="q1c">
+            <div class="question">
+                <div class="text">
+                    Apa tindakan paling tepat yang seharusnya dilakukan dalam situasi ini?
+                </div>
+
+                <input type="radio" name="q1" id="q1a">
+                <label for="q1a">Mengirim semua data agar segera bisa mengakses informasi tiket</label>
+
+                <input type="radio" name="q1" id="q1b">
+                <label for="q1b">Mengirim sebagian data terlebih dahulu sebagai percobaan</label>
+
+                <input type="radio" name="q1" id="q1c">
+                <label for="q1c">Menolak memberikan data sensitif dan meminta verifikasi komunitas melalui kanal resmi</label>
+
+                <input type="radio" name="q1" id="q1d">
+                <label for="q1d">Mengirim data tanpa foto KTP dan passport saja</label>
+            </div>
+            <div class="explanation">
+                <div class="text">
+                    Dalam interaksi online melalui kanal tidak resmi seperti chat atau media sosial, jangan pernah memberikan data pribadi sensitif tanpa memastikan bahwa pihak yang meminta adalah pihak resmi dan terpercaya. Jika ragu, lakukan verifikasi melalui sumber lain yang valid dan terpercaya.
+                </div>
+                <button class="btnOk">Oke</button>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="quest-panel" data-answer="q2b">
+            <div class="question">
+                <div class="text">
+                    Mengapa permintaan data tersebut berisiko tinggi?
+                </div>
+
+                <input type="radio" name="q1" id="q2a">
+                <label for="q2a">Komunitas belum terkenal</label>
+
+                <input type="radio" name="q1" id="q2b">
+                <label for="q2b">Data terlalu sensitif dan tidak relevan</label>
+
+                <input type="radio" name="q1" id="q2c">
+                <label for="q2c">Bahasa tidak formal</label>
+
+                <input type="radio" name="q1" id="q2d">
+                <label for="q2d">Gratis</label>
+            </div>
+            <div class="explanation">
+                <div class="text">
+                    Tidak semua data boleh dibagikan. Informasi seperti identitas resmi, dokumen identitas, dan kontak keluarga termasuk data sensitif yang hanya boleh diberikan untuk keperluan yang jelas, valid, dan melalui sistem yang terpercaya.
+                </div>
+                <button class="btnOk">Oke</button>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="quest-panel" data-answer="q3c">
+            <div class="question">
+                <div class="text">
+                    Jika Anda tetap tertarik dengan komunitas tersebut, apa langkah yang paling aman?
+                </div>
+
+                <input type="radio" name="q1" id="q3a">
+                <label for="q3a">Kirim bertahap</label>
+
+                <input type="radio" name="q1" id="q3b">
+                <label for="q3b">Diam saja</label>
+
+                <input type="radio" name="q1" id="q3c">
+                <label for="q3c">Verifikasi komunitas dulu</label>
+
+                <input type="radio" name="q1" id="q3d">
+                <label for="q3d">Minta jaminan admin</label>
+            </div>
+            <div class="explanation">
+                <div class="text">
+                    Ketertarikan terhadap suatu layanan tidak boleh mengabaikan keamanan. Selalu cari informasi tambahan dari sumber lain sebelum mempercayai atau membagikan data kepada pihak baru.
+                </div>
+                <button class="btnOk">Oke</button>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="quest-panel" data-answer="q4c">
+            <div class="question">
+                <div class="text">
+                    Apa dampak terburuk dari memberikan seluruh data tersebut?
+                </div>
+
+                <input type="radio" name="q1" id="q4a">
+                <label for="q4a">Spam</label>
+
+                <input type="radio" name="q1" id="q4b">
+                <label for="q4b">Kehilangan tiket</label>
+
+                <input type="radio" name="q1" id="q4c">
+                <label for="q4c">Penyalahgunaan identitas</label>
+
+                <input type="radio" name="q1" id="q4d">
+                <label for="q4d">Dikeluarkan dari grup</label>
+            </div>
+            <div class="explanation">
+                <div class="text">
+                    Data pribadi seperti identitas dapat digunakan oleh pihak lain untuk berbagai tujuan tanpa sepengetahuan Anda. Semakin sensitif data yang dibagikan, semakin besar risiko yang ditimbulkan.
+                </div>
+                <button class="btnOk">Oke</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <script src="../js/defender-v1.js"></script>
+
+    <script>
+        const game = new Defender({
+            home: "../index.html",
+            next: "stage2.html",
+        });
+    </script>
+    
+</body>
+</html>

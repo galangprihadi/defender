@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Defender</title>
+
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/defender-v2.css">
+</head>
+<body>
+
+    <div id="curtain"></div>
+    <div id="game-info"></div>
+    <div class="game-panel">
+        <div class="text" id="intro"></div>
+        <div class="chat-panel" id="chatPanel"></div>
+        <div class="quest-panel" id="questPanel"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="../js/defender-v3.js"></script>
+
+    <script>
+        const game = new Defender({
+            gameInfo: "Stage 3 - App Permissions & Access Control",
+            home: "../index.html",
+            next: "stage-4.html",
+
+            intro: `Anda diminta mengikuti kepanitiaan acara kampus. Ketua panitia menyarankan menggunakan aplikasi
+            bernama "Panitiaku" untuk mengatur jadwal dan komunikasi tim. Setelah menginstal aplikasi tersebut,
+            Anda menerima pesan dari sistem untuk mengaktifkan beberapa izin agar semua fitur dapat digunakan.`,
+
+            picture: "../images/working.png",
+            id: "Toni Panitia",
+            chat: [
+                `x: Halo, temen-temen panitia semuanya.`,
+                `x: Terkait aplikasi "Panitiaku", biar semua fitur berjalan optimal, tolong aktifkan 
+                beberapa izin berikut ya.`,
+                `x: Izin lokasi untuk absensi dan koordinasi titik kumpul.`,
+                `x: Izin kontak untuk sinkronisasi anggota panitia.`,
+                `x: Izin mikrofon untuk voice note saat rapat.`,
+                `x: Izin penyimpanan untuk upload dokumen kegiatan.`,
+                `x: Kalau ngga diaktifkan semua, beberapa fitur mungkin ngga berjalan dengan baik.`,
+                `y: Apakah semua izin ini wajib diaktifkan?`,
+                `x: Disarankan aktif semua supaya ya, biar ngga tertinggal informasi penting.`,
+            ],
+
+            quest: [
+                [
+                    `Apa tindakan paling tepat sebelum memberikan izin aplikasi tersebut?`,
+                    [
+                        `menilai apakah setiap izin benar-benar diperlukan, lalu hanya mengaktifkan yang 
+                        relevan dengan kebutuhan.`,
+                        `mengaktifkan semua izin agar aplikasi berjalan maksimal tanpa kendala.`,
+                        `menonaktifkan semua izin agar tidak ada data yang diakses aplikasi.`,
+                        `mengaktifkan semua izin sementara, lalu mengecek nanti setelah aplikasi digunakan.`,
+                    ],
+                    [
+                        `izin aplikasi sebaiknya diberikan secara selektif. tidak semua fitur membutuhkan 
+                        akses ke semua data.`,
+                        `mengaktifkan semua izin memang praktis, tetapi memberi akses berlebih dapat 
+                        meningkatkan risiko.`,
+                        `menolak semua izin bisa membuat aplikasi tidak berfungsi, sehingga pendekatan 
+                        selektif lebih tepat.`,
+                        `menunda evaluasi izin berisiko membuat data sudah terlanjur diakses sebelum Anda 
+                        sempat mengontrolnya.`,
+                    ],
+                ],
+
+                [
+                    `Mengapa pernyataan "aktifkan semua izin agar tidak tertinggal informasi" perlu diwaspadai?`,
+                    [
+                        `karena mendorong pengguna untuk mengambil keputusan cepat tanpa menilai kebutuhan 
+                        izin secara kritis.`,
+                        `karena semua aplikasi pasti berbahaya jika meminta izin.`,
+                        `karena izin lokasi selalu tidak relevan dalam semua aplikasi.`,
+                        `karena fitur tambahan tidak pernah penting.`,
+                    ],
+                    [
+                        `tekanan seperti ini membuat pengguna cenderung mengabaikan pertimbangan keamanan.`,
+                        `tidak semua aplikasi berbahaya. yang penting adalah bagaimana izin digunakan.`,
+                        `izin lokasi bisa relevan dalam beberapa kasus, tetapi harus dipertimbangkan secara 
+                        kontekstual.`,
+                        `fitur tambahan bisa berguna, tetapi tetap tidak berarti semua izin harus diberikan.`,
+                    ],
+                ],
+
+                [
+                    `Jika Anda tetap ingin menggunakan aplikasi tersebut, langkah paling bijak adalah?`,
+                    [
+                        `mengaktifkan hanya izin yang diperlukan terlebih dahulu dan menunda izin sensitif 
+                        sampai benar-benar dibutuhkan.`,
+                        `mengaktifkan semua izin karena aplikasi direkomendasikan oleh ketua panitia.`,
+                        `menggunakan aplikasi tanpa mengaktifkan izin apa pun.`,
+                        `mengaktifkan semua izin hanya saat rapat berlangsung.`,
+                    ],
+                    [
+                        `memberikan izin secara bertahap membantu menjaga kontrol atas data yang diakses 
+                        aplikasi.`,
+                        `rekomendasi dari orang lain tidak menggantikan kebutuhan untuk mengevaluasi keamanan.`,
+                        `tanpa izin, sebagian fitur tidak akan berjalan sehingga tidak selalu realistis.`,
+                        `izin yang sudah diberikan bisa tetap aktif di luar konteks yang Anda inginkan.`,
+                    ],
+                ],
+
+                [
+                    `Apa risiko paling serius jika Anda memberikan semua izin tanpa pertimbangan?`,
+                    [
+                        `aplikasi dapat mengakses dan mengumpulkan lebih banyak data daripada yang Anda sadari.`,
+                        `aplikasi akan langsung merusak sistem ponsel.`,
+                        `semua kontak Anda akan langsung terhapus.`,
+                        `yang terjadi hanya baterai menjadi lebih boros.`,
+                    ],
+                    [
+                        `data seperti lokasi, kontak, dan aktivitas bisa dikumpulkan dan berpotensi disalahgunakan.`,
+                        `kerusakan sistem bukan dampak yang paling umum dari situasi ini.`,
+                        `kontak biasanya tidak langsung terhapus, tetapi bisa diakses tanpa sepengetahuan Anda.`,
+                        `baterai boros bisa terjadi, tetapi risiko utama adalah pada privasi data.`,
+                    ],
+                ],
+            ],
+        });
+
+    </script>
+</body>
+</html>

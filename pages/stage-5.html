@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Defender</title>
+
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/defender-v2.css">
+</head>
+<body>
+
+    <div id="curtain"></div>
+    <div id="game-info"></div>
+    <div class="game-panel">
+        <div class="text" id="intro"></div>
+        <div class="chat-panel" id="chatPanel"></div>
+        <div class="quest-panel" id="questPanel"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="../js/defender-v3.js"></script>
+
+    <script>
+        const game = new Defender({
+            gameInfo: "Stage 5 - Account Sharing & Trust Boundaries",
+            home: "../index.html",
+            next: "stage-6.html",
+
+            intro: `Teman dekat Anda sedang panik karena harus mengumpulkan tugas kelompok malam ini. Ia mengaku
+            tidak bisa mengakses dokumen penting karena akunnya bermasalah. Ia meminta bantuan dengan cara
+            meminjam akun Anda "sebentar saja" supaya bisa mengunduh file dan mengunggah tugas tepat waktu.`,
+
+            picture: "../images/working.png",
+            id: "Bonie",
+            chat: [
+                `x: Hei, aku panik banget. Aku ngga bisa login dari tadi.`,
+                `x: Ini urgent, tugas kelompok harus dikumpul malam ini.`,
+                `x: Aku udah coba reset, tapi email verifikasinya ngga masuk.`,
+                `y: Kamu sudah coba pake perangkat lain atau jaringan lain?`,
+                `x: Udah. Tetep aja mentok di login.`,
+                `x: Aku boleh pinjem akun cloud aja ngga? Bentar doang, aku cuma mau ambil file terus upload tugas.`,
+                `y: Maksudnya kamu login pake akunku?`,
+                `x: Iya. Kalau boleh aku mau login pake akunmu.`,
+                `x: Tenang aja, aku cuma pake bentar, paling ngga sampe 10 menit. Habis itu aku logout.`,
+                `y: Wahh, aku males kalau harus ngeshare password.`,
+                `x: Aku paham. Tapi ini benar-benar darurat. Tolongin lah.`,
+                `x: Kalau kamu kawatir, aku bisa video call ntar biar kamu lihat langsung kalau aku beneran yang pake.`,
+                `x: Atau aku share screen, jadi kamu bisa lihat aku buka file apa saja.`,
+                `y: Masalahnya akun itu isinya banyak file pribadi juga.`,
+                `x: Aku ngga bakal buka yang lain, sumpah. Aku cuma mau cari folder tugas.`,
+                `x: Kalau kamu ngga bantu, satu kelompok bisa kena. Aku sudah minta maaf ke yang lain soalnya 
+                akunku error, tapi tetap saja mereka ngga respon.`,
+                `x: Mereka semua udah ngerjain tugasnya, tinggal upload aja. Aku kebagian tugas upload juga.`,
+                `y: Lah kamu kan bisa minta file dari mereka?`,
+                `x: Aku sudah chat mereka. Tapi mereka slow respon, mungkin kayaknya lagi di jalan.`,
+                `x: Kamu kan yang paling cepat balasnya. Tolong lah.`,
+                `x: Ntar tak traktir ngopi-ngopi lah, serius.`,
+                `x: Ntar aku bakal hapus riwayat login setelah selesai, janji.`,
+                `x: Kalau kamu masih ragu, ntar setelah selesai kamu bisa ganti password. Biar kamu tenang.`,
+                `x: Aku cuma butuh bentar aja, untuk ngumpulin tugas doang.`,
+                `y: Coba kamu hubungin temen-temen kelompokmu lagi?`,
+                `x: Aku benar-benar kepepet ini. Aku cuma kepikiran minjem akun ke kamu doang.`,
+                `x: Tolong lah. Aku sebenernya ngga enak banget minta kayak gini, tapi aku ngga punya pilihan.`,
+            ],
+
+            quest: [
+                [
+                    `Apa tindakan paling tepat dalam situasi ini?`,
+                    [
+                        `Menolak membagikan email dan password, lalu menawarkan cara lain yang lebih aman seperti mengirim file atau membuat akses terbatas.`,
+                        `Memberikan akses sementara karena situasinya mendesak dan akan segera mengganti password setelah selesai.`,
+                        `Membagikan akun karena teman tersebut dipercaya dan hanya akan digunakan sebentar.`,
+                        `Memberikan sebagian akses saja dengan tetap memantau aktivitas akun selama digunakan.`,
+                    ],
+                    [
+                        `Memberikan bantuan tanpa berbagi akun adalah cara paling aman karena Anda tetap menjaga kontrol atas data.`,
+                        `Mengganti password setelahnya tidak menghilangkan risiko saat akses sudah diberikan.`,
+                        `Kepercayaan tidak mengubah risiko keamanan saat kredensial dibagikan.`,
+                        `Pemantauan tidak selalu efektif karena Anda tetap membuka akses akun ke pihak lain.`,
+                    ],
+                ],
+
+                [
+                    `Mengapa permintaan teman ini tetap berisiko meskipun Anda percaya padanya?`,
+                    [
+                        `Karena setelah kredensial dibagikan, Anda tidak bisa lagi mengendalikan bagaimana akses tersebut digunakan.`,
+                        `Karena akses akun bisa saja tersimpan di perangkat teman tanpa disadari.`,
+                        `Karena akun dapat digunakan untuk mengakses informasi lain yang terhubung dengan akun tersebut.`,
+                        `Karena berbagi akun dapat menimbulkan kesalahpahaman jika terjadi sesuatu pada data.`,
+                    ],
+                    [
+                        `Kepercayaan tidak berhubungan dengan kontrol teknis. Anda tetap kehilangan kendali atas akses akun.`,
+                        `Perangkat atau aplikasi bisa menyimpan kredensial secara otomatis tanpa disengaja.`,
+                        `Satu akun sering terhubung ke banyak layanan, sehingga risikonya bisa lebih luas.`,
+                        `Masalah tidak selalu berasal dari niat jahat, tetapi dari konsekuensi penggunaan bersama.`,
+                    ],
+                ],
+
+                [
+                    `Jika Anda tetap ingin membantu tanpa merusak hubungan, langkah paling bijak adalah?`,
+                    [
+                        `Membantu dengan cara yang tidak memerlukan berbagi akun, seperti mengirim file atau membuka akses terbatas.`,
+                        `Memberikan akses dengan batas waktu tertentu agar tetap terkendali.`,
+                        `Memberikan akses tetapi meminta teman segera logout setelah selesai.`,
+                        `Memberikan akses sambil terus memantau aktivitas akun selama digunakan.`,
+                    ],
+                    [
+                        `Pendekatan ini menjaga keseimbangan antara membantu dan tetap melindungi akun Anda.`,
+                        `Batas waktu tidak menjamin akses tidak disalahgunakan selama periode tersebut.`,
+                        `Logout tidak menjamin bahwa akses tidak tersimpan di perangkat yang digunakan.`,
+                        `Pemantauan tidak selalu mencegah risiko karena akses sudah diberikan.`,
+                    ],
+                ],
+
+                [
+                    `Apa risiko paling serius jika Anda membagikan email dan password akun Anda?`,
+                    [
+                        `Akun dapat digunakan untuk mengakses dan mengubah data lain yang terhubung tanpa Anda sadari.`,
+                        `Akses ke akun dapat tersebar di lebih dari satu perangkat tanpa Anda ketahui.`,
+                        `Akun dapat tetap login di perangkat lain meskipun Anda sudah mengganti password.`,
+                        `Akun menjadi sulit dilacak jika digunakan oleh lebih dari satu orang.`,
+                    ],
+                    [
+                        `Satu akun sering menjadi pintu ke berbagai layanan lain, sehingga dampaknya bisa meluas.`,
+                        `Semakin banyak perangkat yang mengakses, semakin besar potensi kebocoran.`,
+                        `Beberapa sistem tetap mempertahankan sesi login aktif meskipun password berubah.`,
+                        `Penggunaan bersama membuat sulit mengetahui siapa yang melakukan suatu aktivitas.`,
+                    ],
+                ],
+            ],
+        });
+    </script>
+</body>
+</html>

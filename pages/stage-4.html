@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Defender</title>
+
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/defender-v2.css">
+</head>
+<body>
+
+    <div id="curtain"></div>
+    <div id="game-info"></div>
+    <div class="game-panel">
+        <div class="text" id="intro"></div>
+        <div class="chat-panel" id="chatPanel"></div>
+        <div class="quest-panel" id="questPanel"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="../js/defender-v3.js"></script>
+
+    <script>
+        const game = new Defender({
+            gameInfo: "Stage 4 - Oversharing on Social Media",
+            home: "../index.html",
+            next: "stage-5.html",
+
+            intro: `Anda baru saja berlibur ke luar negeri bersama beberapa sahabat Anda. Banyak kenangan yang 
+            terdokumentasi melalui foto. Beberapa foto bahkan sudah diunggah di media sosial dan mendapat banyak 
+            like dan komentar positif dari teman-teman Anda. Lalu kemudia salah satu sahabat Anda mengontak Anda
+            terkait salah satu foto yang ingin dia unggah di media sosialnya.`,
+
+            picture: "../images/working.png",
+            id: "Lilie",
+            chat: [
+                `x: Hey, udah dibongkar kopernya? Hehehe.`,
+                `y: Belum beres semua. Masih capek.`,
+                `x: Aku juga belum beres. Nyantai dulu lah, masih capek juga.`,
+                `x: Eh, foto kemarin yang di lounge bandara itu aku upload ya.`,
+                `y: Foto yang mana?`,
+                `x: Itu lho, foto yang kita nunjukin tiket sama passport kita rame-rame.`,
+                `x: Fotonya estetik banget, kayak gambarin kita bareng-bareng mau mulai petualangan keliling
+                dunia gitu. Lucuu...`,
+                `x: Rencananya mau aku post di Instagram, ntar aku tag semuanya.`,
+                `y: Hmmm... Tapi itu aman ngga ya?`,
+                `y: Soalnya itu kan kelihatan detil gitu informasi di passport sama di tiket kita.`,
+                `x: Halah, nyante aja. Cuma buat seru-seruan aja kok, biar ada kenangan bareng-bareng gitu.`,
+                `x: Lagian banyak kok yang upload kayak gituan. Buat lucu-lucuan aja. `,
+                `x: Sayang fotonya kalau ngga diupload. Bagus banget soalnya fotonya menurutku.`,
+            ],
+
+            quest: [
+                [
+                    `Apa tindakan paling tepat dalam situasi ini?`,
+                    [
+                        `Meminta teman untuk menyembunyikan atau menutup bagian sensitif sebelum dipublikasikan.`,
+                        `Membiarkan saja karena foto tersebut hanya untuk kenangan.`,
+                        `Meminta teman menghapus foto sepenuhnya tanpa kompromi.`,
+                        `Ikut mengunggah foto tersebut agar tidak terlihat berbeda dari yang lain.`,
+                    ],
+                    [
+                        `Berbagi kenangan boleh, tetapi informasi sensitif seperti tiket atau paspor sebaiknya 
+                        tidak terlihat.`,
+                        `Foto yang terlihat aman bisa mengandung informasi yang berisiko jika dilihat lebih detail.`,
+                        `Menghapus seluruhnya memang aman, tetapi masih ada alternatif yang lebih seimbang.`,
+                        `Mengikuti orang lain tanpa mempertimbangkan risiko bisa membuat Anda terekspos tanpa sadar.`,
+                    ],
+                ],
+
+                [
+                    `Mengapa situasi ini tetap berisiko meskipun terlihat biasa di media sosial?`,
+                    [
+                        `Karena detail kecil dapat digunakan untuk mengumpulkan informasi pribadi.`,
+                        `Karena akan banyak orang yang tidak suka dengan postingan kita.`,
+                        `Karena semua foto liburan sangat personal sehingga sebaiknya tidak dibagikan.`,
+                        `Karena foto bersama harus diunggah dengan seizin semua orang yang terlibat`,
+                    ],
+                    [
+                        `Informasi seperti tiket atau dokumen dapat digunakan untuk memahami data pribadi Anda.`,
+                        `Respon atau tanggapan dari orang lain tidak berpengaruh langsung terhadap keamanan data.`,
+                        `Foto liburan tetap bisa dibagikan selama tidak mengandung informasi sensitif.`,
+                        `Izin memang penting, namun dalam hal ini risiko utama ada pada informasi yang terekspos.`,
+                    ],
+                ],
+
+                [
+                    `Jika Anda ingin menjaga hubungan baik sekaligus menjaga privasi, langkah paling bijak adalah?`,
+                    [
+                        `Memberi saran secara halus agar bagian sensitif disembunyikan.`,
+                        `Meminta semua foto dihapus karena merasa tidak nyaman.`,
+                        `Tidak mengatakan apa pun agar tidak terjadi konflik.`,
+                        `Meminta teman hanya menghapus tag nama Anda.`,
+                    ],
+                    [
+                        `Pendekatan yang baik membantu menjaga hubungan sekaligus mengurangi risiko.`,
+                        `Langkah ini aman, tetapi bisa menimbulkan konflik jika tidak dikomunikasikan dengan baik.`,
+                        `Diam membuat risiko tetap ada tanpa solusi.`,
+                        `Menghapus tag tidak menghilangkan informasi sensitif di dalam foto.`,
+                    ],
+                ],
+
+                [
+                    `Apa risiko paling serius dari situasi ini?`,
+                    [
+                        `Informasi yang terlihat dapat digunakan untuk menyusun profil pribadi Anda.`,
+                        `Orang lain akan meniru gaya liburan Anda.`,
+                        `Akun media sosial Anda kehilangan follower karena menilai Anda terlalu sombong.`,
+                        `Teman Anda merasa tersinggung karena Anda menolak ajakannya untuk menunggah foto tersebut.`,
+                    ],
+                    [
+                        `Data kecil yang terlihat bisa dikombinasikan menjadi informasi yang lebih berbahaya.`,
+                        `Meniru gaya bukan risiko utama dalam konteks ini.`,
+                        `Dalam hal ini, follower bukan isu utama dibandingkan dengan privasi yang Anda miliki.`,
+                        `Kendati penting, namun perasaan teman tidak terkait langsung dengan keamanan data.`,
+                    ],
+                ],
+            ],
+        });
+
+    </script>
+</body>
+</html>

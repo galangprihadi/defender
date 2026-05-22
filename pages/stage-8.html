@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Defender</title>
+
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/defender-v2.css">
+</head>
+<body>
+
+    <div id="curtain"></div>
+    <div id="game-info"></div>
+    <div class="game-panel">
+        <div class="text" id="intro"></div>
+        <div class="chat-panel" id="chatPanel"></div>
+        <div class="quest-panel" id="questPanel"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="../js/defender-v3.js"></script>
+
+    <script>
+        const game = new Defender({
+            gameInfo: "Stage 8 - Multi-step Phishing & Social Engineering",
+            home: "../index.html",
+            next: "stage-9.html",
+
+            intro: `Anda menerima pesan email yang terlihat resmi dari platform pembayaran digital yang sering Anda gunakan. 
+            Pesan tersebut menyatakan bahwa Anda mendapatkan refund akibat kesalahan transaksi, tetapi Anda harus 
+            melakukan verifikasi untuk mencairkan dana tersebut.`,
+
+            picture: "../images/working.png",
+            id: "+62 5678 5678 5678",
+            chat: [
+                `x: Halo, kami dari layanan pembayaran digital.`,
+                `x: Kami mendeteksi adanya kesalahan sistem pada salah satu transaksi Anda.`,
+                `x: Anda berhak menerima refund sebesar Rp1.250.000.`,
+                `y: Refund dari transaksi yang mana ya?`,
+                `x: Sistem kami tidak menampilkan detail transaksi melalui chat ini.`,
+                `x: Namun Anda dapat memverifikasi melalui portal resmi kami.`,
+                `x: Silakan klik tautan berikut untuk memproses refund:`,
+                `x: pay-secure-refund.com/claim`,
+                `y: Ini link resmi ya?`,
+                `x: Ya, ini halaman verifikasi refund.`,
+                `x: Proses hanya memerlukan login dan konfirmasi kode verifikasi.`,
+                `x: Harap dilakukan dalam 15 menit, jika tidak dana akan dikembalikan ke sistem.`,
+                `y: Kok harus cepat sekali?`,
+                `x: Karena ini proses otomatis dan terbatas waktunya.`,
+                `x: Banyak pengguna kehilangan kesempatan refund karena terlambat.`,
+                `x: Setelah login, kode verifikasi akan dikirim ke nomor Anda untuk konfirmasi.`,
+                `x: Mohon segera diselesaikan agar dana dapat diproses.`,
+            ],
+
+            quest: [
+                [
+                    `Apa tindakan paling tepat dalam situasi ini?`,
+                    [
+                        `Tidak mengklik tautan tersebut dan memeriksa langsung transaksi serta notifikasi melalui 
+                        aplikasi resmi.`,
+                        `Mengklik tautan lalu login karena ada informasi refund yang cukup besar.`,
+                        `Mengklik tautan untuk melihat detail, tetapi tidak memasukkan data apa pun.`,
+                        `Menunggu beberapa saat untuk melihat apakah refund tetap tersedia tanpa tindakan.`,
+                    ],
+                    [
+                        `Verifikasi harus dilakukan melalui aplikasi resmi. Jangan mengikuti instruksi dari tautan 
+                        yang tidak dapat dipastikan keasliannya.`,
+                        `Iming-iming dana sering digunakan untuk menarik perhatian dan mendorong keputusan cepat.`,
+                        `Membuka tautan tetap berisiko karena bisa mengarah ke halaman palsu.`,
+                        `Menunda tanpa verifikasi tidak menyelesaikan ketidakpastian terhadap informasi tersebut.`,
+                    ],
+                ],
+
+                [
+                    `Mengapa pesan ini patut dicurigai meskipun terlihat meyakinkan?`,
+                    [
+                        `Karena meminta login dan verifikasi melalui tautan eksternal yang tidak dapat 
+                        diverifikasi kebenarannya.`,
+                        `Karena menawarkan refund dalam jumlah cukup besar.`,
+                        `Karena format pesan terlihat rapi dan profesional.`,
+                        `Karena menyebut adanya kesalahan sistem.`,
+                    ],
+                    [
+                        `Permintaan login melalui tautan adalah indikator yang perlu diwaspadai karena bisa 
+                        mengarah ke halaman palsu.`,
+                        `Jumlah besar bisa menjadi daya tarik, tetapi bukan indikator utama.`,
+                        `Tampilan profesional dapat dengan mudah ditiru.`,
+                        `Kesalahan sistem bisa saja terjadi, tetapi perlu diverifikasi melalui kanal resmi.`,
+                    ],
+                ],
+
+                [
+                    `Jika Anda ingin memastikan apakah informasi tersebut benar tanpa mengambil risiko, langkah 
+                    paling bijak adalah?`,
+                    [
+                        `Membuka aplikasi resmi secara mandiri atau menghubungi layanan pelanggan melalui kanal 
+                        resmi.`,
+                        `Menggunakan tautan yang diberikan karena terlihat lebih cepat.`,
+                        `Membalas pesan untuk meminta detail tambahan sebelum login.`,
+                        `Mengikuti proses hingga tahap memasukkan kode verifikasi untuk memastikan kebenaran.`,
+                    ],
+                    [
+                        `Verifikasi melalui kanal resmi memastikan Anda tidak berinteraksi dengan pihak yang 
+                        tidak valid.`,
+                        `Kecepatan tidak boleh mengorbankan keamanan.`,
+                        `Balasan tidak menjamin bahwa pihak tersebut benar-benar resmi.`,
+                        `Memberikan kode tetap berisiko meskipun hanya untuk “mencoba”.`,
+                    ],
+                ],
+
+                [
+                    `Apa risiko paling serius jika Anda mengikuti seluruh proses yang diminta (login dan kode 
+                    verifikasi)?`,
+                    [
+                        `Akun Anda dapat diambil alih sepenuhnya karena pelaku mendapatkan akses login dan 
+                        otorisasi.`,
+                        `Akun Anda dapat digunakan untuk melakukan aksi tertentu tanpa Anda sadari dalam 
+                        waktu singkat.`,
+                        `Informasi dalam akun Anda dapat dilihat oleh pihak lain tanpa Anda ketahui.`,
+                        `Aktivitas login dari perangkat lain dapat muncul di akun Anda.`,
+                    ],
+                    [
+                        `Dengan kombinasi kredensial dan kode verifikasi, pelaku dapat mengambil alih akun 
+                        sepenuhnya.`,
+                        `Akses sementara tetap berbahaya karena dapat digunakan untuk tindakan tertentu.`,
+                        `Akses baca terhadap data tetap berisiko tetapi tidak sebesar kehilangan kendali akun.`,
+                        `Login dari perangkat lain adalah indikator awal, bukan dampak paling serius.`,
+                    ],
+                ],
+            ],
+        });
+    </script>
+</body>
+</html>
