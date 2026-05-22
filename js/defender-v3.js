@@ -27,7 +27,7 @@ class Defender {
     ============================================================================================== */
 
     loadGameInfo() {
-        this.eGameInfo.innerHTML = `${this.gameData.gameInfo}<button class="left" id="btnExit">X</button>`;
+        this.eGameInfo.innerHTML = `${this.gameData.gameInfo}<button class="left" id="btnExit">❌</button>`;
         this.eIntro.innerHTML = this.gameData.intro;
 
         this.eGameInfo.querySelector("#btnExit").addEventListener("click", (event) => {

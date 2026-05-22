@@ -9,16 +9,16 @@
     --color-chat-bubble1: #dde6fd;
     --color-chat-bubble2: #4e88fe;
     --color-chat-bubble3: #e43a1c;
-    --color-choice: #dde6fd;
+    --color-choice: #4e88fe;
     --color-font-white: #f4f4f4;
     --color-font-smokewhite: #d4d4d4;
     --color-font-black: #3a4b6c;
-    --color-red: #FE5151;
+    --color-red: #D92546;
     --color-green: #4DE74D;
 
-    --font-size2: 2.8vw;
-    --font-size3: 3vw;
-    --font-size4: 3.2vw;
+    --font-size2: 3.6vw;
+    --font-size3: 3.8vw;
+    --font-size4: 4vw;
 }
 
 * {
@@ -31,7 +31,7 @@ html {
     -moz-user-select: none;     /* Firefox */
     -ms-user-select: none;      /* IE10+ */
     user-select: none;          /* Standar */
-    overscroll-behavior-y: none;
+    /* overscroll-behavior-y: none; */
     width: 100%;
 }
 
@@ -66,15 +66,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 6vw;
+    height: 8vw;
     aspect-ratio: 1/1;
     border: none;
     border-radius: 50%;
     font-size: var(--font-size2);
     font-weight: bold;
-    color: var(--color-font-white);
-    background-color: var(--color-red);
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    color: var(--color-red);
+    background-color: var(--color-background);
+    /* box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); */
 }
 
 #game-info button.left {
@@ -179,7 +179,7 @@ body {
     background-color: var(--color-chat-bubble3);
 }
 
-.quest-panel {
+/* .quest-panel {
     position: relative;
     display: flex;
     justify-content: flex-start;
@@ -275,6 +275,110 @@ body {
     font-size: var(--font-size2);
     background-color: var(--color-choice);
     border-color: var(--color-choice);
+    color: var(--color-font-black);
+    font-weight: bold;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+} */
+
+
+.quest-panel {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 3vw;
+    width: 100%;
+    padding: 5vw 5vw;
+    margin-top: 6vw;
+    margin-bottom: 20vw;
+    border-radius: 3vw;
+    /* background-color: var(--color-quest-panel-blue); */
+    border: 2px solid var(--color-quest-panel-blue);
+    box-shadow: 0 0px 10px rgba(255, 255, 255, 0.8);
+}
+
+.quest-panel.red {
+    background-color: var(--color-quest-panel-red);
+    border-color: var(--color-quest-panel-red);
+}
+
+.quest-panel.green {
+    background-color: var(--color-quest-panel-green);
+    border-color: var(--color-quest-panel-green);
+}
+
+.quest-panel .question {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 3vw;
+    width: 100%;
+}
+
+.quest-panel .question .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: var(--font-size3);
+    color: var(--color-font-black);
+}
+
+.quest-panel .question label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    border: 2px solid var(--color-quest-panel-blue);
+    border-radius: 3vw;
+    padding: 3vw 3vw;
+    font-size: var(--font-size3);
+    text-align: center;
+    color: var(--color-font-black);
+}
+
+.quest-panel .question input {
+    display: none;
+}
+
+.quest-panel .question input:checked + label{
+    background-color: var(--color-choice);
+    border-color: var(--color-choice);
+    color: var(--color-font-white);
+}
+
+.quest-panel .explanation {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+}
+
+.quest-panel .explanation .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: var(--font-size3);
+    color: var(--color-font-white);
+}
+
+.quest-panel .explanation .btnOk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vw;
+    border: none;
+    border-radius: 3vw;
+    padding: 3vw 4vw;
+    font-size: var(--font-size2);
+    background-color: var(--color-background);
     color: var(--color-font-black);
     font-weight: bold;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
