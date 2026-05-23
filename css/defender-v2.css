@@ -9,16 +9,17 @@
     --color-chat-bubble1: #dde6fd;
     --color-chat-bubble2: #4e88fe;
     --color-chat-bubble3: #e43a1c;
-    --color-choice: #4e88fe;
+    --color-choice: #E4EAFF;
     --color-font-white: #f4f4f4;
     --color-font-smokewhite: #d4d4d4;
-    --color-font-black: #3a4b6c;
+    --color-font-black: #1c2330;
     --color-red: #D92546;
     --color-green: #4DE74D;
 
-    --font-size2: 3.6vw;
-    --font-size3: 3.8vw;
-    --font-size4: 4vw;
+    --font-size1: 3vw;
+    --font-size2: 3.8vw;
+    --font-size3: 4vw;
+    --font-size4: 4.3vw;
 }
 
 * {
@@ -59,7 +60,7 @@ body {
     font-size: var(--font-size4);
     line-height: 1.2;
     font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
 }
 
 #game-info button {
@@ -70,11 +71,11 @@ body {
     aspect-ratio: 1/1;
     border: none;
     border-radius: 50%;
-    font-size: var(--font-size2);
+    font-size: var(--font-size1);
     font-weight: bold;
     color: var(--color-red);
     background-color: var(--color-background);
-    /* box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); */
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 #game-info button.left {
@@ -109,7 +110,8 @@ body {
     align-items: center;
     color: var(--color-font-black);
     font-size: var(--font-size3);
-    line-height: 1.2;
+    line-height: 1.3;
+    font-weight: 500;
 }
 
 .chat-panel {
@@ -121,7 +123,7 @@ body {
     border-radius: 3vw;
     padding-bottom: 2vw;
     background-color: var(--color-chat-panel);
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .chat-panel .header {
@@ -140,7 +142,7 @@ body {
 }
 
 .chat-panel .header img {
-    width: 7vw;
+    width: 10vw;
     aspect-ratio: 1/1;
     border-radius: 50%;
     background-color: var(--color-chat-header);
@@ -179,108 +181,6 @@ body {
     background-color: var(--color-chat-bubble3);
 }
 
-/* .quest-panel {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    row-gap: 3vw;
-    width: 100%;
-    padding: 5vw 5vw;
-    margin-top: 6vw;
-    margin-bottom: 20vw;
-    border-radius: 3vw;
-    background-color: var(--color-quest-panel-blue);
-    box-shadow: 0 0px 10px rgba(255, 255, 255, 0.8);
-}
-
-.quest-panel.red {
-    background-color: var(--color-quest-panel-red);
-}
-
-.quest-panel.green {
-    background-color: var(--color-quest-panel-green);
-}
-
-.quest-panel .question {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    row-gap: 3vw;
-    width: 100%;
-}
-
-.quest-panel .question .text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: var(--font-size3);
-    color: var(--color-font-white);
-}
-
-.quest-panel .question label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    border: 1px solid var(--color-font-white);
-    border-radius: 2vw;
-    padding: 2vw 3vw;
-    font-size: var(--font-size3);
-    text-align: center;
-    color: var(--color-font-white);
-}
-
-.quest-panel .question input {
-    display: none;
-}
-
-.quest-panel .question input:checked + label{
-    background-color: var(--color-choice);
-    border-color: var(--color-choice);
-    color: var(--color-font-black);
-}
-
-.quest-panel .explanation {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 80%;
-}
-
-.quest-panel .explanation .text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: var(--font-size3);
-    color: var(--color-font-white);
-}
-
-.quest-panel .explanation .btnOk {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10vw;
-    border: 1px solid var(--color-choice);
-    border-radius: 2vw;
-    padding: 2vw 3vw;
-    font-size: var(--font-size2);
-    background-color: var(--color-choice);
-    border-color: var(--color-choice);
-    color: var(--color-font-black);
-    font-weight: bold;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
-} */
-
-
 .quest-panel {
     position: relative;
     display: flex;
@@ -293,9 +193,8 @@ body {
     margin-top: 6vw;
     margin-bottom: 20vw;
     border-radius: 3vw;
-    /* background-color: var(--color-quest-panel-blue); */
-    border: 2px solid var(--color-quest-panel-blue);
-    box-shadow: 0 0px 10px rgba(255, 255, 255, 0.8);
+    background-color: var(--color-quest-panel-blue);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .quest-panel.red {
@@ -313,7 +212,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    row-gap: 3vw;
+    row-gap: 5vw;
     width: 100%;
 }
 
@@ -322,8 +221,10 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    line-height: 1.3;
+    font-weight: 500;
     font-size: var(--font-size3);
-    color: var(--color-font-black);
+    color: var(--color-font-white);
 }
 
 .quest-panel .question label {
@@ -331,12 +232,15 @@ body {
     justify-content: center;
     align-items: center;
     width: 90%;
-    border: 2px solid var(--color-quest-panel-blue);
+    border: 0.4vw solid var(--color-background);
     border-radius: 3vw;
     padding: 3vw 3vw;
     font-size: var(--font-size3);
     text-align: center;
-    color: var(--color-font-black);
+    line-height: 1.3;
+    font-weight: 500;
+    color: var(--color-font-white);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .quest-panel .question input {
@@ -346,7 +250,7 @@ body {
 .quest-panel .question input:checked + label{
     background-color: var(--color-choice);
     border-color: var(--color-choice);
-    color: var(--color-font-white);
+    color: var(--color-font-black);
 }
 
 .quest-panel .explanation {
@@ -366,6 +270,8 @@ body {
     align-items: center;
     text-align: center;
     font-size: var(--font-size3);
+    line-height: 1.3;
+    font-weight: 500;
     color: var(--color-font-white);
 }
 
