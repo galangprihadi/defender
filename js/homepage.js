@@ -94,10 +94,6 @@ class GameMenu {
         });
     }
 
-
-    
-
-
     // ============================================================================ Player Id Form
     playerIdForm() {
         this.eCurtain.innerHTML = `
