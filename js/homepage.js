@@ -6,23 +6,23 @@ class GameMenu {
     // ============================================================================== Sounds
     sounds = {
         transition: new Howl({
-            src: "../sounds/transition.mp3",
+            src: "sounds/transition.mp3",
         }),
 
         pop: new Howl({
-            src: "../sounds/pop.mp3",
+            src: "sounds/pop.mp3",
         }),
 
         cling: new Howl({
-            src: "../sounds/cling.mp3",
+            src: "sounds/cling.mp3",
         }),
 
         shake: new Howl({
-            src: "../sounds/shake.mp3",
+            src: "sounds/shake.mp3",
         }),
 
         wrong: new Howl({
-            src: "../sounds/wrong.mp3",
+            src: "sounds/wrong.mp3",
         }),
 
         // backsound: new Howl({
