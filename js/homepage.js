@@ -3,6 +3,36 @@ class GameMenu {
     eCurtain = document.querySelector("#curtain");
     btnGames = document.querySelectorAll("button");
 
+    // ============================================================================== Sounds
+    sounds = {
+        transition: new Howl({
+            src: "../sounds/transition.mp3",
+        }),
+
+        pop: new Howl({
+            src: "../sounds/pop.mp3",
+        }),
+
+        cling: new Howl({
+            src: "../sounds/cling.mp3",
+        }),
+
+        shake: new Howl({
+            src: "../sounds/shake.mp3",
+        }),
+
+        wrong: new Howl({
+            src: "../sounds/wrong.mp3",
+        }),
+
+        // backsound: new Howl({
+        //     src: "../sounds/winter-weather.mp3",
+        //     loop: true,
+        //     volume: 0.5,
+        //     // autoplay: true,
+        // }),
+    }
+
     constructor (param) {
         const appUrls = param.appUrls;
 
@@ -65,35 +95,7 @@ class GameMenu {
     }
 
 
-    // ============================================================================== Sounds
-    sounds = {
-        transition: new Howl({
-            src: "../sounds/transition.mp3",
-        }),
-
-        pop: new Howl({
-            src: "../sounds/pop.mp3",
-        }),
-
-        cling: new Howl({
-            src: "../sounds/cling.mp3",
-        }),
-
-        shake: new Howl({
-            src: "../sounds/shake.mp3",
-        }),
-
-        wrong: new Howl({
-            src: "../sounds/wrong.mp3",
-        }),
-
-        // backsound: new Howl({
-        //     src: "../sounds/winter-weather.mp3",
-        //     loop: true,
-        //     volume: 0.5,
-        //     // autoplay: true,
-        // }),
-    }
+    
 
 
     // ============================================================================ Player Id Form
