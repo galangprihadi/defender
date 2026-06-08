@@ -16,13 +16,16 @@
     </div>
 
     <div id="menu">
-        <button>Mulai Permainan</button>
+        <button>Chat Detective</button>
+        <button disabled="true">Defender</button>
+        <button id="btnReset">Reset Id</button>
     </div>
 
     <div id="footer">
         © 2026 Gals Studio. All Rights Reserved.
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="js/homepage.js"></script>
 
@@ -30,6 +33,7 @@
 
         const gameMenu = new GameMenu({
             appUrls: [
+                "chat-detective/chat-detective-v2.html",
                 "pages/stage-1.html",
             ]
         });
