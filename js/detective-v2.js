@@ -121,10 +121,11 @@ class Detective {
 
     /* 
     Format:
-    [abcd]
+    [abcde]
     ab: question type, fw (fake website) / af (advance fee) / ph (phising) / mw (malware) / em (emotional)
-    c: main analysis answer, c (correct) / w (wrong)
-    d: number of attempts to answer the reason 
+    c: fake or real, 0 (fake) / 1 (real)
+    d: main analysis answer, c (correct) / w (wrong)
+    e: number of attempts to answer the reason 
 
     Example:
     emc0 -> em:(emotional) | c:correct | 0: number of attempts to answer the reason
