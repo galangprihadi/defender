@@ -98,8 +98,8 @@ class GameMenu {
     playerIdForm() {
         this.eCurtain.innerHTML = `
             Your identity:
-            <input type="text" id="formId" name="detektifName" placeholder="NIM" required maxlength="10" autocomplete="off">
-            <button disabled="true" id="btnSave">Simpan</button>
+            <input type="text" id="formId" name="detektifName" placeholder="Student ID" required maxlength="10" autocomplete="off">
+            <button disabled="true" id="btnSave">Save</button>
         `;
 
         const eFormId = document.querySelector("#formId");

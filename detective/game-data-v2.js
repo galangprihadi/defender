@@ -277,7 +277,7 @@ const gameData = {
 
             real: [
                 `x: Salam kak, selamat datang di komunitas traveling ”Jalan Terus”. Perkenalkan aku Lilie, selaku admin komunitas ini.`,
-                `x: Untuk proses verifikasi member baru, kami perlu informasi identitas umum dan kontak kerabat dekat kak.`,
+                `x: Untuk proses verifikasi member baru, kami perlu informasi identitas umum dan kontak Anda kak.`,
                 `y: Salam kenal kak.`,
                 `y: Itu informasinya untuk apa ya kak? Apa ada biaya keanggotaannya juga?`,
                 `x: Ngga ada biaya keanggotaan kak, semuanya gratis, kami cuma ngambil keuntungan dari penjualan tiket aja kak.`,

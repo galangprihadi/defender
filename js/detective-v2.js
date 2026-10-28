@@ -118,6 +118,18 @@ class Detective {
     }
 
     // ============================================================================== Form Submission
+
+    /* 
+    Format:
+    [abcd]
+    ab: question type, fw (fake website) / af (advance fee) / ph (phising) / mw (malware) / em (emotional)
+    c: main analysis answer, c (correct) / w (wrong)
+    d: number of attempts to answer the reason 
+
+    Example:
+    emc0 -> em:(emotional) | c:correct | 0: number of attempts to answer the reason
+    */
+
     async submitForm(form, inputData) {
         if (form) {
             const formData = new FormData();
@@ -469,7 +481,7 @@ class Detective {
                     behavior: 'smooth',
                 });
 
-                this.codeAll += `${this.cQuest.id}${this.codeType}${this.codeReason}-`;
+                this.codeAll += `${this.cQuest.id}${this.chatType}${this.codeType}${this.codeReason}-`;
                 console.log(this.codeAll);
 
                 this.eCurtain.querySelector("button").addEventListener("click", () => {
