@@ -19,7 +19,7 @@ const gameData = {
         yang terindikasi sebagai penipuan. Terdapat 10 kasus yang harus Anda selesaikan pada 
         permainan ini.<br><br>Selamat bermain.`,
 
-    closing: `Permainan telah selesai.`,
+    closing: `Permainan telah selesai.</br>Skor Anda:</br>`,
     
     btnLabels: {
         scam: "Terindikasi<br>Penipuan",

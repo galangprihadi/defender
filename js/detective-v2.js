@@ -17,7 +17,7 @@ class Detective {
         this.tScam = gameData.btnLabels.scam || "Suspected Scam";
         this.tSafe = gameData.btnLabels.safe || "Indicated Safe";
         this.tOpening = gameData.opening || "Welcome to Chat Detective.";
-        this.tClosing = gameData.closing || "You have completed the game."
+        this.tClosing = gameData.closing || "You have completed the game.</br>Your score is:</br>";
         this.tStart = gameData.btnLabels.start || "Play";
         this.tNext = gameData.btnLabels.next || "Next";
         this.tHome = gameData.btnLabels.home || "Back to Home";
@@ -27,6 +27,7 @@ class Detective {
         
         this.stage = 1;
         this.codeAll = "";
+        this.wrongAnswer = 0;
 
         // ============================================================================== Curtain
         this.eCurtain.innerHTML = `${this.tOpening}<button>${this.tStart}</button>`
@@ -405,6 +406,7 @@ class Detective {
                     begin: () => {
                         this.eGamePanel.querySelector("#answer").classList.add("wrong");
                         this.codeType = "w";
+                        this.wrongAnswer += 1;
                     },
                     complete: () => {
                         this.eReason.style.display = "none";
@@ -503,7 +505,8 @@ class Detective {
                         });
                     }
                     else {
-                        this.eCurtain.innerHTML = `${this.tClosing}<button>${this.tHome}</button>`;
+                        const score = 100 - (this.wrongAnswer * 10);
+                        this.eCurtain.innerHTML = `${this.tClosing}${score}<button>${this.tHome}</button>`;
 
                         this.eCurtain.querySelector("button").addEventListener("click", () => {
                             this.sounds.pop.play();
