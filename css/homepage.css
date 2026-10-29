@@ -29,8 +29,8 @@
     --color-green: #4DE74D; */
 
     --color-blue: #4482fe;
-    --color-red: #fe5151;
-    --color-green: #19a867;
+    --color-red: #e13434;
+    --color-green: #18955d;
     --color-grey: #d6d6d6;
 
     --color-toast: #000000e2;
@@ -125,7 +125,7 @@ body {
     border: none;
     border-radius: 3vw;
     padding: 4vw 6vw;
-    font-size: var(--font-size2);
+    font-size: var(--font-size3);
     background-color: var(--color-green);
     color: var(--color-font-light);
     font-weight: bold;
@@ -177,7 +177,8 @@ body {
     font-size: var(--font-size3);
     text-align: center;
     color: var(--color-font-light);
-    font-weight: 500;
+    font-weight: bold;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 #menu button:disabled {
